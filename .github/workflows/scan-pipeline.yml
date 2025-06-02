@@ -1,6 +1,10 @@
 name: Security Scan Pipeline
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   scan:
@@ -9,5 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run a one-line script
-        run: echo "Hello from your pipeline!"
+      - name: Hello World
+        run: echo "Hello from GitHub Actions!"
+
+# ниче не понял
